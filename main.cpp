@@ -12,7 +12,6 @@ int main() {
     gb.display();
     cout << "Average: " << gb.average() << endl;
     cout << "Above 80: " << gb.countAbove(80) << endl;
-    cout << "Top student: " << gb.topStudent() << endl;
 
     gb.curve(10);
 
@@ -20,7 +19,6 @@ int main() {
     gb.display();
     cout << "Average: " << gb.average() << endl;
     cout << "Above 80: " << gb.countAbove(80) << endl;
-    cout << "Top student: " << gb.topStudent() << endl;
 
     return 0;
 }
