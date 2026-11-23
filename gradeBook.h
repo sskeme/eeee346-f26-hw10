@@ -15,19 +15,17 @@ public:
     }
 
     void curve(int points) {
-        // TODO: create a lambda, then loop with iterators
+        // TODO: create a lambda, then loop with an iterator and the lambda
     }
 
     int countAbove(int threshold) {
-        // TODO: use count_if and a lambda
+        // TODO: use count_if and a lambda that takes a pair object
     }
 
     double average() {
-        // TODO: create a lambda, then loop with iterators
-    }
-
-    string topStudent() {
-        // TODO: create a lambda, then loop with iterators
+        int total = 0;             
+        // TODO: create a lambda, then loop with an iterator and the lambda
+        return static_cast<double>(total) / scores.size();
     }
 
     void display() {
