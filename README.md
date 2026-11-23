@@ -22,7 +22,7 @@ Below is a description of the class and its required functionality:
   * `countAbove`:
     * Has an int-typed parameter `threshold`.
     * Returns an int.
-    * Uses `count_if` and a lambda function that takes a pair object to count the students whose scores are greater than `threshold`.
+    * Uses `count_if` and a lambda function that takes a pair object to count the students whose scores are greater than `threshold`. For the `count_if` built-in function, refer to the lecture slides or https://cplusplus.com/reference/algorithm/count_if/.
   * `average`:
     * No parameters.
     * Returns a double.
