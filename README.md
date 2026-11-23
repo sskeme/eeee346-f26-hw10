@@ -18,7 +18,7 @@ Below is a description of the class and its required functionality:
   * `curve`:
     * Has an int-typed parameter `points`.
     * return data type: void
-    * Creates a lambda function that takes an int-typed parameter `score` and returns that score plus `points`, but never more than 100. Then uses a loop with an iterator to update every student's score with this lambda.
+    * Creates a lambda function that takes an int-typed parameter `s` and returns that `s` plus `points`, but never more than 100. Then uses a loop with an iterator to update every student's score with this lambda.
   * `countAbove`:
     * Has an int-typed parameter `threshold`.
     * Returns an int.
@@ -26,7 +26,7 @@ Below is a description of the class and its required functionality:
   * `average`:
     * No parameters.
     * Returns a double.
-    * Creates a lambda function that takes an int-typed `total` and an int-typed `score` and returns their sum. Then uses a loop with an iterator and this lambda to add up all the scores, and returns the average score of all students.
+    * Creates a lambda function that takes an int-typed `t` and an int-typed `s` and returns their sum. Then uses a loop with an iterator and this lambda to add up all the scores, and returns the average score of all students.
   * `display`:
     * Already implemented.
     * Loops through the map and prints each student's name and score.
