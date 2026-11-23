@@ -7,7 +7,7 @@ using namespace std;
 
 class GradeBook {
 private:
-    map<string, int> scores;
+   // TODO: create a map object that stores key-value pairs consisting of a string and an integer
 
 public:
     void addScore(string name, int score) {
