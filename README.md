@@ -9,7 +9,7 @@ The member functions are relatively straightforward, so you will implement them 
 Below is a description of the class and its required functionality:
 
 * private member variable:
-  * map<std::string, int> named `scores`: Stores each student's name (key) and score (value).
+  * map<string, int> named `scores`: Stores each student's name (key) and score (value).
 * public member functions:
   * `addScore`:
     * Has a string parameter `name` and an int-typed parameter `score`.
