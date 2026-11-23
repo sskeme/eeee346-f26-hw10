@@ -1,1 +1,86 @@
-# eeee346-f26-hw10
+# Introduction
+
+In this homework assignment, you will practice working with an associative container (map) and lambda functions in C++. You will use lambda expressions with `count_if` and also create lambdas and call them directly inside your own loops.
+
+# Tasks
+
+The file `gradeBook.h` contains the definition of a class named GradeBook that you need to complete. 
+The member functions are relatively straightforward, so you will implement them directly within the class definition. 
+Below is a description of the class and its required functionality:
+
+* private member variable:
+  * map<std::string, int> named `scores`: Stores each student's name (key) and score (value).
+* public member functions:
+  * `addScore`:
+    * Has a string parameter `name` and an int-typed parameter `score`.
+    * return data type: void
+    * Adds the student to `scores`.
+  * `curve`:
+    * Has an int-typed parameter `points`.
+    * return data type: void
+    * Creates a lambda function that takes a score and returns that score plus `points`, but never more than 100. Then uses a loop with iterators to update every student's score with this lambda.
+  * `countAbove`:
+    * Has an int-typed parameter `threshold`.
+    * Returns an int.
+    * Uses `count_if` and a lambda function to count the students whose scores are greater than `threshold`.
+  * `average`:
+    * No parameters.
+    * Returns a double.
+    * Creates a lambda function that takes a running total and a score and returns their sum. Then uses a loop with iterators and this lambda to add up all the scores, and returns the average score of all students.
+  * `topStudent`:
+    * No parameters.
+    * Returns a string.
+    * Creates a lambda function that takes two scores and returns true if the first is higher than the second. Then uses a loop with iterators and this lambda to find the name of the student with the highest score.
+  * `display`:
+    * Already implemented.
+    * Loops through the map and prints each student's name and score.
+
+# Hints
+
+* The lambda for `curve()` needs to capture `points`. When you loop with an iterator `it`, `it->first` is the name and `it->second` is the score. You can assign to `it->second` to update a score.
+* The lambda for `countAbove()` needs to capture `threshold`. Its parameter is a pair<std::string, int>, which represents one map element (name and score).
+* For `average()`, start with a total of 0 and update it in each iteration: `total = add(total, it->second);`. Be careful about integer division when computing the average.
+* For `topStudent()`, start by assuming the first student is the best, then compare every student against the current best using your lambda.
+* You may assume the map is not empty when calling average and topStudent.
+
+main.cpp is already provided. Do not modify it.
+
+# Compile and Test
+
+1. Type the following commands on Terminal.
+
+```
+g++ -o main *.cpp
+```
+```
+./main
+```
+
+2. This homework assignment does not require any input. Here are the expected outputs:
+
+```
+== Original ==
+  Alice: 85
+  Bob: 72
+  Carol: 90
+  David: 58
+  Eve: 67
+Average: 74.4
+Above 80: 2
+Top student: Carol
+
+== After curve (+10) ==
+  Alice: 95
+  Bob: 82
+  Carol: 100
+  David: 68
+  Eve: 77
+Average: 84.4
+Above 80: 3
+Top student: Carol
+```
+
+# Submit
+
+Please upload your gradeBook.h file to myCourses > Assignments > HW10. Do not submit *.docx, *.pdf, *.txt, or *.zip file.
+   
