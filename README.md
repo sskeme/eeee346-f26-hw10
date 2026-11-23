@@ -14,23 +14,19 @@ Below is a description of the class and its required functionality:
   * `addScore`:
     * Has a string parameter `name` and an int-typed parameter `score`.
     * return data type: void
-    * Adds the student to `scores`.
+    * Adds the student with the parameters to the map `scores`.
   * `curve`:
     * Has an int-typed parameter `points`.
     * return data type: void
-    * Creates a lambda function that takes a score and returns that score plus `points`, but never more than 100. Then uses a loop with iterators to update every student's score with this lambda.
+    * Creates a lambda function that takes an int-typed parameter `score` and returns that score plus `points`, but never more than 100. Then uses a loop with an iterator to update every student's score with this lambda.
   * `countAbove`:
     * Has an int-typed parameter `threshold`.
     * Returns an int.
-    * Uses `count_if` and a lambda function to count the students whose scores are greater than `threshold`.
+    * Uses `count_if` and a lambda function that takes a pair object to count the students whose scores are greater than `threshold`.
   * `average`:
     * No parameters.
     * Returns a double.
-    * Creates a lambda function that takes a running total and a score and returns their sum. Then uses a loop with iterators and this lambda to add up all the scores, and returns the average score of all students.
-  * `topStudent`:
-    * No parameters.
-    * Returns a string.
-    * Creates a lambda function that takes two scores and returns true if the first is higher than the second. Then uses a loop with iterators and this lambda to find the name of the student with the highest score.
+    * Creates a lambda function that takes an int-typed `total` and an int-typed `score` and returns their sum. Then uses a loop with an iterator and this lambda to add up all the scores, and returns the average score of all students.
   * `display`:
     * Already implemented.
     * Loops through the map and prints each student's name and score.
@@ -38,9 +34,8 @@ Below is a description of the class and its required functionality:
 # Hints
 
 * The lambda for `curve()` needs to capture `points`. When you loop with an iterator `it`, `it->first` is the name and `it->second` is the score. You can assign to `it->second` to update a score.
-* The lambda for `countAbove()` needs to capture `threshold`. Its parameter is a pair<std::string, int>, which represents one map element (name and score).
-* For `average()`, start with a total of 0 and update it in each iteration: `total = add(total, it->second);`. Be careful about integer division when computing the average.
-* For `topStudent()`, start by assuming the first student is the best, then compare every student against the current best using your lambda.
+* The lambda for `countAbove()` needs to capture `threshold`. Its parameter is a pair<string, int>, which represents one map element (name and score).
+* For `average()`, start with a total of 0 and update it in each iteration.
 * You may assume the map is not empty when calling average and topStudent.
 
 main.cpp is already provided. Do not modify it.
@@ -67,7 +62,6 @@ g++ -o main *.cpp
   Eve: 67
 Average: 74.4
 Above 80: 2
-Top student: Carol
 
 == After curve (+10) ==
   Alice: 95
@@ -77,7 +71,6 @@ Top student: Carol
   Eve: 77
 Average: 84.4
 Above 80: 3
-Top student: Carol
 ```
 
 # Submit
